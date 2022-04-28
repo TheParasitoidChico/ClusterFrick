@@ -1,0 +1,99 @@
+-------------------------------------------------
+phylotaR: Implementation of PhyLoTa in R [v1.2.0]
+-------------------------------------------------
+Checking for valid NCBI BLAST+ Tools ...
+Found: [/home/christian/ncbi-blast-2.11.0+/bin//makeblastdb]
+Found: [/home/christian/ncbi-blast-2.11.0+/bin//blastn]
+. . Running makeblastdb
+Setting up pipeline with the following parameters:
+. blstn          [/home/christian/ncbi-blast-2.11.0+/bin//blastn]
+. btchsz         [100]
+. date           [2022-04-27]
+. db_only        [FALSE]
+. mdlthrs        [3000]
+. mkblstdb       [/home/christian/ncbi-blast-2.11.0+/bin//makeblastdb]
+. mncvrg         [51]
+. mnsql          [250]
+. multiple_ids   [FALSE]
+. mxevl          [1e-10]
+. mxnds          [1e+05]
+. mxrtry         [100]
+. mxsql          [2000]
+. mxsqs          [50000]
+. ncps           [1]
+. outfmt         [6 qseqid sseqid pident length evalue qcovs qcovhsp]
+. outsider       [FALSE]
+. srch_trm       [NOT predicted[TI] NOT "whole genome shotgun"[TI] NOT unverified[TI] NOT "synthetic construct"[Organism] NOT refseq[filter] NOT TSA[Keyword]]
+. txid           [1640959]
+. v              [FALSE]
+. wd             [./OUTPUT/1640959directory]
+. wt_tms         [1, 3, 6 ...]
+-------------------------------------------------
+---------------------------------------------------
+Running pipeline on [unix] at [2022-04-27 23:36:14]
+---------------------------------------------------
+Running stages: taxise, download, cluster, cluster2
+--------------------------------------------
+Starting stage TAXISE: [2022-04-27 23:36:14]
+--------------------------------------------
+Searching taxonomic IDs ...
+Downloading taxonomic records ...
+. [1-6]
+Generating taxonomic dictionary ...
+---------------------------------------------
+Completed stage TAXISE: [2022-04-27 23:36:16]
+---------------------------------------------
+----------------------------------------------
+Starting stage DOWNLOAD: [2022-04-27 23:36:16]
+----------------------------------------------
+Identifying suitable clades ...
+Identified [1] suitable clades.
+Downloading hierarchically ...
+Working on parent [id 1640959]: [1/1] ...
+. + whole subtree ...
+. . Downloading [26 sqs] ...
+. . . [1-26]
+Successfully retrieved [26 sqs] in total.
+-----------------------------------------------
+Completed stage DOWNLOAD: [2022-04-27 23:36:22]
+-----------------------------------------------
+---------------------------------------------
+Starting stage CLUSTER: [2022-04-27 23:36:22]
+---------------------------------------------
+Working from [id 1640959] down hierarchy
+. + direct [id 1640959 (genus)]
+. + subtree [id 1640959 (genus)]
+. . BLASTing [26 sqs] ....
+. . Running makeblastdb
+. . Running blastn
+. . Removed [0/252] hits due to insufficient coverage
+. . Identified [8] clusters
+. + parent [id 1640959]
+. . + direct [id 2661292 (no rank)]
+. . + subtree [id 2661292 (no rank)]
+. . + parent [id 2661292]
+. . . + subtree [id 2661293 (species)]
+. + parent [id 1640959]
+. . + subtree [id 1918187 (species)]
+. + parent [id 1640959]
+. . + subtree [id 1918186 (species)]
+. + parent [id 1640959]
+. . + subtree [id 1640960 (species)]
+[1/1]
+----------------------------------------------
+Completed stage CLUSTER: [2022-04-27 23:36:24]
+----------------------------------------------
+-----------------------------------------------
+Starting stage CLUSTER^2: [2022-04-27 23:36:24]
+-----------------------------------------------
+Loading clusters ...
+Done. Only one cluster set -- skipping cluster^2
+Dropping all clusters of < 3 sqs ...
+Renumbering clusters ...
+Saving ...
+------------------------------------------------
+Completed stage CLUSTER^2: [2022-04-27 23:36:24]
+------------------------------------------------
+-------------------------------------------
+Completed pipeline at [2022-04-27 23:36:24]
+-------------------------------------------
