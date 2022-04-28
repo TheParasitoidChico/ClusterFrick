@@ -8,7 +8,7 @@ PHYLO_pipe_beta00.sh : Run in directory containing all pipe_imp_#.py (pipe imple
 provide arguments: target taxa containing text (example provided as 'target_taxa.txt) and number of clusters of interest (numeric)
 
 As of now, you must open PhylotaR_pipe.R and manually include path to NCBI blast directory.
-All dependencies must be installed independantly.
+All dependencies must be installed independently.
 
 
 updates coming soon to remedy these issues.
