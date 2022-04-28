@@ -12,5 +12,10 @@ All dependencies must be installed independently.
 
 
 updates coming soon to remedy these issues.
+# PLANS FOR FUTURE UPDATES:
+1. checking taxonomy retrieved from NCBI query against initial taxonomy list
+2. flow control, so you can run one task on different machines
+3. JSON output
+
 
 -The Parasitoid Chico
